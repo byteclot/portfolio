@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jane Doe - portfolio</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="myModal3" class="pop_menu hamburger">
+                <div class="modal-content-pop_menu">
+                    <span class="close3">&times;</span>
+                    <br><br>
+                    <a href="#about">About me</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contacts">Contacts</a>
+                </div>
+            </div>
+            <nav>
+                <a href="#about">About me</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contacts">Contacts</a>
+                <a id="home" href="#home">Home</a>
+            </nav>
+            <h1>Jane Doe, <br>Front-end developer</h1>
+        </div>
+    </header>
+        <section id="about">
+            <div id="pictures">
+                <img id="keyboard" src="image.jpg" alt="keyboard picture" />
+                <img id="face" src="person.jpg" alt="my picture" />
+            </div>
+            <div id="text_about">
+            <h2>About me</h2>
+            <p>Hi, I'm Jane Doe, front-end developer.
+                Programming is my hobby.<br><b>Skills:</b> HTML, CSS, JS, React</p>
+            </div>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div id="cards">
+                <div id="flash">
+                    <img src="project1.png" alt="screenshot" />
+                    <h3>Flashcards</h3>
+                    <button id="myBtn" type="button" class="open-window">More Info</button>
+                </div>
+                <!-- The Modal -->
+                <div id="myModal" class="window">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Flashcards</h2>
+                        <p>You can find this project on GitHub. <br>This project was completed
+                        as part of a front-end development course on HyperSkill. It was challenging, but fun!
+                        I've learned quite a bit while working on it.</p>
+                    </div>
+                </div>
+                <div id="piano">
+                    <img src="project2.png" alt="another screenshot" />
+                    <h3>Virtual Piano</h3>
+                    <button id="myBtn2" type="button" class="open-window">More Info</button>
+                </div>
+                <!-- The Modal -->
+                <div id="myModal2" class="window">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close2">&times;</span>
+                        <h2>Virtual Piano</h2>
+                        <p>This project is available for download form GitHub repository. <br>
+                        This website will produce a working piano! All notes included. Even the black keys.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contacts">
+            <h2>CONTACTS</h2>
+            <div>
+                <p>You can email me at <a href="mailto: janedow@janedow.com">janedow@janedow.com</a></p>
+                <p>or phone number -<a href="tel:12345678">12345678</a></p>
+            </div>
+        </section>
+    <footer><h2>JANE DOE</h2><p>2021</p></footer>
+
+<script>
+    // Get the modal
+    let modal = document.getElementById("myModal");
+    let modal2 = document.getElementById("myModal2");
+    let modal3 = document.getElementById("myModal3");
+
+    // Get the button that opens the modal
+    let btn = document.getElementById("myBtn");
+    let btn2 = document.getElementById("myBtn2");
+    let btn3 = document.getElementById("hamburger");
+
+    // Get the <span> element that closes the modal
+    let span = document.getElementsByClassName("close")[0];
+    let span2 = document.getElementsByClassName("close2")[0];
+    let span3 = document.getElementsByClassName("close3")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    btn2.onclick = function() {
+        modal2.style.display = "block";
+    }
+
+    btn3.onclick = function() {
+        modal3.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    span2.onclick = function() {
+        modal2.style.display = "none";
+    }
+
+    span3.onclick = function() {
+        modal3.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target === modal || event.target === modal2 || event.target === modal3) {
+            modal.style.display = "none";
+            modal2.style.display = "none";
+            modal3.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
